@@ -1,11 +1,4 @@
 # hacker-box
-    
-  _______ ______ _______ ___ ___ / \__     
- |   |   |   __ \       |   |   (    @\___ 
- |       |   __ <   -   |-     /         O 
- |___|___|______/_______|___|_/   (_____/  
-                             /_____/       
-
  Hb0x / Hacker-box Network tools 
  Untuk memudahkan operasi keamanan & Penetration Testing 
  Serta mengidentifikasi kelemahan keamanan dan respon 
@@ -16,8 +9,8 @@
   api     : hackertarget.com 
   kontak  : sp0c40191 (aliichsangfr@gmail)
 
-# Install
+## Install
 git clone https://github.com/sp0c40191/hacker-box.git
-cd hacker-bos
-chmod +x install.sh
-./install.sh
+cd hacker-bos 
+chmod +x install.sh 
+./install.sh 
