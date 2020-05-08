@@ -12,6 +12,7 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
          printf ' [*] Run on terminal " hbox " \n'
          
          fi
+         exit
     fi
 elif [ "$OSTYPE" == "linux-android" ]; then
     printf "[!] install on android linux ... \n"
@@ -25,5 +26,5 @@ elif [ "$OSTYPE" == "linux-android" ]; then
          printf ' [*] Run on terminal " hbox "\n'
          
          fi
+         exit
     fi
-    exit
