@@ -18,8 +18,7 @@
 install : 
 git clone https://github.com/sp0c40191/hacker-box.git
 cd hacker-box 
-chmod +x install.sh 
-./install.sh
-hbox
+chmod +x hbox
+./hbox
 
 
