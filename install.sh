@@ -13,8 +13,6 @@ if [ "$OSTYPE" == "linux-gnu" ]; then
          
          fi
     fi
-    exit
-
 elif [ "$OSTYPE" == "linux-android" ]; then
     printf "[!] install on android linux ... \n"
     cp hbox  /data/data/com.termux/files/usr/bin
