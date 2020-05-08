@@ -236,23 +236,9 @@ check (){
 run (){
     banner
     check
-    sleep 1s
-    printf '\n[*] check internet connection ... \n'
-    sleep 1s
-    echo -e "GET http://google.com HTTP/1.0\n\n" | nc google.com 80 > /dev/null 2>&1
-    if [ $? -eq 0 ]; then
-        printf ' [*] Internet \e[32mavailable\e[0m ... \n'
-        sleep 2 
         clear 
         banner
         shell
-    else
-         printf ' [!] Internet not \e[31mavailable\e[0m ...'
-         sleep 1
-         exit
-    fi
-    
-
 }
 
 ## selsai gan 
