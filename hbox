@@ -1,0 +1,278 @@
+
+
+#
+# Jangan di recode ya su !
+# Belajar terus bikin sendiri , mantap 
+#
+
+# Hb0x / Hacker-box
+# Coded by ali at 07:78
+# api : hackertarget.com
+# sp0c40191 - aliichsangfr@gmail 
+
+linux
+
+
+banner (){
+    clear
+    printf '  _______ ______ _______ ___ ___ / \__       \n'
+    printf ' |   |   |   __ \       |   |   (    @\___   \n'
+    printf ' |       |   __ <   -   |-     /         O   \n'
+    printf ' |___|___|______/_______|___|_/   (_____/    \n'
+    printf '     \e[32mHack-b0x Network tools\e[0m  /_____/ \e[32mV 0.1 bt \n'
+    printf '     By sp0c40191 \e[0m(\e[32maliichsangfr@gmail.com\e[0m)\n\n'
+}
+
+shell (){
+    read -p $' hb0x \e[32m~\e[0m # ' shell
+
+    case "$shell" in
+        'help')
+            echo ""
+            echo " info   :: Menampilkan informasi inc hb0x "
+            echo " show   :: Menampilan list tools " 
+            echo " banner :: Menampilkan banner " 
+            echo " ver    :: Menmpilkan versi "
+            echo " "
+            echo " clear / cls  :: Membersihkan Layar "
+            echo " exit  / quit :: Keluar "
+            echo ""
+            shell
+        ;;
+
+        'info')
+            clear
+            echo ""
+            echo "  _______ ______ _______ ___ ___ / \__     "
+            echo " |   |   |   __ \       |   |   (    @\___ "
+            echo " |       |   __ <   -   |-     /         O "
+            echo " |___|___|______/_______|___|_/   (_____/  "
+            echo "                             /_____/       "
+            echo ""
+            echo " Hb0x / Hacker-box Network tools "
+            echo " Untuk memudahkan operasi keamanan & Penetration Testing "
+            echo " Serta mengidentifikasi kelemahan keamanan dan respon "
+            echo " informasi tentang alamat ip , jaringan , Catatan DNS" 
+            echo ""
+            echo " Coded by ali at 07:78 "
+            echo "  ver     : 0.1 bt "
+            echo "  api     : hackertarget.com "
+            echo "  kontak  : sp0c40191 (aliichsangfr@gmail)"
+            echo ""
+            echo " Recode ? BakuHantam kita bosssss ^^"    
+            echo ""
+        
+            shell
+        ;;
+
+        'show')
+            echo " "
+            echo " 1 Traceroute 	    Menggunakan mtr alat traceroute canggih melacak jalur koneksi Internet."
+            echo " 2 Test Ping 	        Alat umum untuk menguji konektivitas ke host, melakukan ping dari server."
+            echo " 3 DNS Lookup 	    Temukan catatan DNS untuk domain, hasilnya ditentukan menggunakan alat DNS."
+            echo " 4 Reverse DNS        Temukan catatan DNS Balik untuk alamat IP atau rentang alamat IP."
+            echo " 5 Shared DNS       	Temukan host yang berbagi server DNS."
+            echo " 6 Whois Lookup       Tentukan pemilik terdaftar dari domain atau blok alamat IP dengan whois."
+            echo " 7 GeoIP Lookup 	    Temukan lokasi alamat IP menggunakan alat lokasi pencarian GeoIP."
+            echo " 8 Reverse IP 	    Temukan host web yang berbagi alamat IP dengan pencarian IP balik."
+            echo " 9 TCP Port Scan 	    Determine the status of an Internet facing service or firewall"
+            echo " 10 UDP Port Scan     Pemindaian port UDP online tersedia untuk layanan UDP umum"
+            echo " 11 Subnet Lookup     Tentukan properti subnet jaringan"
+            echo " 12 HTTP Headers 	    Melihat HTTP Header dari situs web"
+            echo " 13 AS Lookup         Dapatkan Nomor Sistem Autonomous atau rincian ASN dari AS atau alamat IP."
+            echo " "
+            shell
+        ;;
+        'banner')
+            echo ""
+            banner
+            echo ""
+            shell
+        ;;
+        'ver'|'versi')
+            echo " v 0.1 bt"
+            shell
+        ;;
+        'clear'|'cls')
+            info
+            clear
+            shell
+        ;;
+        'exit'|'quit')
+            printf ' [*] exit ... \n'
+            sleep 1
+            clear
+            exit
+        ;;
+        1)
+            echo " Traceroute "
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result  "
+            curl https://api.hackertarget.com/mtr/?q=$ip
+            echo ""
+            shell
+        ;;
+        2)
+            echo " Test Ping"
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/nping/?q=$ip
+            echo ""
+            shell
+        ;;
+        3)
+            echo " DNS Lookup"
+            read -p $' [*] Website Target : ' ip
+            curl https://api.hackertarget.com/dnslookup/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        4)
+            echo " Reverse DNS"
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/reversedns/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        5)
+            echo " Shared DNS"
+            read -p $' [*] dns / hostname : ' hostname
+            echo " [*] result "
+            curl https://api.hackertarget.com/findshareddns/?q=$hostname
+            echo ""
+            shell
+
+        ;;
+        6)
+            echo " Whois Lookup"
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/whois/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        7)
+            echo " GeoIP Lookup"
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/geoip/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        8)
+            echo " Reverse IP"
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/reverseiplookup/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        9) 
+            echo " TCP Port Scan"
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/nmap/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        10)
+            echo " UDP Port Scan"
+            read -p $' [*] Ip Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/nmap/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        11)
+            echo " Subnet Lookup"
+            read -p $' [*] Target : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/subnetcalc/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        12)
+            echo " HTTP Headers"
+            read -p $' [*] web : ' ip
+            echo " [*] result "
+            curl https://api.hackertarget.com/httpheaders/?q=$ip
+            echo ""
+            shell
+
+        ;;
+        '')
+            shell
+        ;;
+        *)
+            echo " [*] Command tidak di temukan ! "
+            echo "     Gunakan 'help' "
+
+            shell
+        ;;
+    esac
+    
+}
+
+check (){
+    if [[ ! -n "$(which curl)" ]]; then
+    banner
+    printf '[!] Curl tidak terinstall ! \n'
+    printf '[!] install ... \n'
+        if [ "$OSTYPE" == "linux-gnu" ]; then
+            sudo apt-get install curl 
+            exit
+        elif [ "$OSTYPE" == "linux-android" ]; then
+             pkg install curl
+        fi
+    fi
+}
+run (){
+    banner
+    check
+    sleep 1s
+    printf '\n[*] check internet connection ... \n'
+    sleep 1s
+    echo -e "GET http://google.com HTTP/1.0\n\n" | nc google.com 80 > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        printf ' [*] Internet \e[32mavailable\e[0m ... \n'
+        sleep 2 
+        clear 
+        banner
+        shell
+    else
+         printf ' [!] Internet not \e[31mavailable\e[0m ...'
+         sleep 1
+         exit
+    fi
+    
+
+}
+
+## selsai gan 
+## udah sampe sini aja 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#sp0c40191
+run
